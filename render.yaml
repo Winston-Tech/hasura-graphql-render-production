@@ -2,6 +2,7 @@ services:
 - type: web
   name: hasura
   env: docker
+  region: singapore 
   autoDeploy: false
   healthCheckPath: /healthz
   envVars:
