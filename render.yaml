@@ -1,6 +1,6 @@
 services:
 - type: web
-  name: hasura-singapore-feb4
+  name: hasura-singapore-feb4-2
   env: docker
   region: singapore 
   autoDeploy: false
@@ -8,7 +8,7 @@ services:
   envVars:
   - key: HASURA_GRAPHQL_METADATA_DATABASE_URL
     fromDatabase:
-      name: hasura-metadata-singapore-feb4
+      name: hasura-metadata-singapore-feb4-2
       property: connectionString
   - key: HASURA_GRAPHQL_ENABLE_CONSOLE
     value: true
@@ -20,4 +20,5 @@ services:
 #  - key: HASURA_GRAPHQL_ADMIN_SECRET
 #    generateValue: true
 databases:
-- name: hasura-metadata-singapore-feb4
+- name: hasura-metadata-singapore-feb4-2
+  region: singapore
