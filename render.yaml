@@ -14,11 +14,8 @@ services:
     value: true
   - key: PORT
     value: 10000
-# Uncomment to automatically generate an admin secret
-# for your Hasura instance. The value is visible under
-# Environment on the Render dashboard.
-#  - key: HASURA_GRAPHQL_ADMIN_SECRET
-#    generateValue: true
+  - key: HASURA_GRAPHQL_ADMIN_SECRET
+    value: AGXDRJSMTjsy73UP7XaQviZtaryO6F20F7SYX5TQWTifAL39n3Qm9tonw2og7NS1
 databases:
 - name: hasura-metadata-singapore-feb4-2
   region: singapore
