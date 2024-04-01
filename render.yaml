@@ -1,15 +1,13 @@
 services:
 - type: web
-  name: hasura-singapore-feb4-2
+  name: hasura-production
   env: docker
   region: singapore 
   autoDeploy: false
   healthCheckPath: /healthz
   envVars:
   - key: HASURA_GRAPHQL_METADATA_DATABASE_URL
-    fromDatabase:
-      name: hasura-metadata-singapore-feb4-2
-      property: connectionString
+    value: "postgres://raconteur_production_database_user:Kc4j7EvU4kLOqO3Ch8UfnzhHqV8tGtn8@dpg-co5joikf7o1s73a35gcg-a.singapore-postgres.render.com/raconteur_production_database"  # Updated to new DB
   - key: HASURA_GRAPHQL_ENABLE_CONSOLE
     value: true
   - key: PORT
@@ -17,5 +15,5 @@ services:
   - key: HASURA_GRAPHQL_ADMIN_SECRET
     value: AGXDRJSMTjsy73UP7XaQviZtaryO6F20F7SYX5TQWTifAL39n3Qm9tonw2og7NS1
 databases:
-- name: hasura-metadata-singapore-feb4-2
+- name: raconteur_production_database
   region: singapore
